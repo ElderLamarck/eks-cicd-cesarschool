@@ -11,15 +11,15 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: dp016
+      app: dp016-app
   template:
     metadata:
       labels:
-        app: dp016
+        app: dp016-app
     spec:
       containers:
         - image: 325583868777.dkr.ecr.ca-central-1.amazonaws.com/dp016-repository:latest
           imagePullPolicy: Always
-          name: dp016
+          name: dp016-app
           ports:
             - containerPort: 3000

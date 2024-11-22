@@ -2,15 +2,15 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app.kubernetes.io/name: dp016
-    app.kubernetes.io/instance: dp016-instance
+    app.kubernetes.io/name: dp016-app
+    app.kubernetes.io/instance: dp016-app-instance
     app.kubernetes.io/version: "1.0.0"
     app.kubernetes.io/component: backend
     app.kubernetes.io/managed-by: kubectl
-  name: dp016-service
+  name: dp016-app
 spec:
   selector:
-    app: dp016
+    app: dp016-app
   ports:
    -  protocol: TCP
       port: 8080
